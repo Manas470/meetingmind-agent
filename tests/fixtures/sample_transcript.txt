@@ -1,0 +1,67 @@
+Sprint 42 Planning — May 25, 2026
+
+[Alice Chen - Product Manager]: Alright everyone, let's get started. We've got a lot to cover for Sprint 42. Thanks for joining. Quick note — Sarah won't be joining today, she's out sick.
+
+[Bob Smith - Tech Lead]: No worries. Should we record the decisions for her?
+
+[Alice Chen]: Yes, and I'll make sure she gets a summary. Okay, let's start with carry-overs from Sprint 41. The authentication service refactor is still pending.
+
+[Bob Smith]: Right. I was blocked on that last sprint because the design spec from the design team wasn't finalized. I talked to Carol yesterday and she said the final mockups will be ready by Wednesday, May 27th. Once I have those, I can finish the refactor in about 3 days.
+
+[Alice Chen]: Good. So Bob, you own the auth refactor, targeting completion by May 30th. Let me note that as a carry-over blocker — Carol's mockups are blocking Bob's auth work.
+
+[David Park - Backend Engineer]: Speaking of blockers — the payment gateway integration is also stuck. I've been waiting on the Stripe API keys from Finance for 2 weeks now. Without them I can't do any real testing.
+
+[Alice Chen]: That's critical. David, I'll escalate to Finance today to get those keys. Can you document what's needed so I have a clear ask?
+
+[David Park]: Sure, I'll put together a requirements doc by end of day today.
+
+[Alice Chen]: Perfect. So David's action item is to write the Stripe requirements doc today, May 25th. And my action item is to escalate to Finance and get keys to David by May 27th.
+
+[Bob Smith]: While we're on infrastructure — we're also overdue on upgrading the Node.js version. We're on 18.x and support ends next month. I'd say that's high priority.
+
+[Alice Chen]: Agreed. Who should own that?
+
+[Bob Smith]: I can do it. It should be straightforward — one day of work. Let me target May 28th for the upgrade and testing.
+
+[Alice Chen]: Great. Bob also owns the Node.js upgrade by May 28th. Now let's talk about new items for this sprint. The mobile push notification feature — Priya, where are we?
+
+[Priya Nair - Mobile Engineer]: I've done the scoping. We need backend support for device token registration first. Once backend exposes that endpoint, I can build the mobile side in parallel. I'd estimate 4-5 days for the full feature.
+
+[David Park]: I can build the device token registration endpoint. It's about 2 days of work. If I start today I'd have it ready by Thursday, May 28th.
+
+[Priya Nair]: Perfect, then I can target mobile delivery by June 2nd.
+
+[Alice Chen]: Decided: push notifications go into Sprint 42. David owns the backend endpoint by May 28th, Priya owns mobile delivery by June 2nd.
+
+[Bob Smith]: One more thing — we should set up Datadog monitoring before we go to prod. We've been saying this for 3 sprints. It's not glamorous but it's critical.
+
+[Alice Chen]: You're right. Who can own Datadog setup?
+
+[David Park]: I'll own it. I've done it before. I need access to the production AWS account though — Bob, can you add me?
+
+[Bob Smith]: I'll grant you access today.
+
+[David Park]: Then I can have Datadog configured by June 3rd.
+
+[Alice Chen]: Decisions: Datadog setup is this sprint, David owns it by June 3rd. Bob grants AWS access today.
+
+[Bob Smith]: What about the outstanding tech debt on the search service? It's getting slow — P99 latency is around 800ms.
+
+[Alice Chen]: That's a medium priority for this sprint. Bob, can you do a performance investigation and give us a report by May 30th?
+
+[Bob Smith]: Yeah I can do that. I'll profile it and recommend whether we need to index changes or a more significant refactor.
+
+[Alice Chen]: Great. Last item — Priya, the app store review feedback mentioned the onboarding flow is confusing. We need UX improvements.
+
+[Priya Nair]: I've already drafted some improvements. I can have them in a PR by June 1st, but I need design approval from Carol first.
+
+[Alice Chen]: I'll make sure Carol reviews by May 28th. Priya targets PR by June 1st.
+
+[Alice Chen]: Alright, let's wrap up. Summary: we have 8 action items across the team, 2 active blockers — Carol's mockups blocking Bob, and Finance keys blocking David. Next sprint review is June 8th. I'll send out meeting notes to everyone. Thanks everyone!
+
+[Bob Smith]: Thanks Alice.
+
+[David Park]: Thanks!
+
+[Priya Nair]: Thanks, talk soon.

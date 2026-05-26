@@ -1,0 +1,23 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 2"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+# Required environment variables (set in Railway dashboard):
+# ANTHROPIC_API_KEY
+# DATABASE_URL         (auto-set by Railway PostgreSQL addon)
+# JIRA_SERVER_URL      (optional)
+# JIRA_API_TOKEN       (optional)
+# JIRA_USER_EMAIL      (optional)
+# SLACK_BOT_TOKEN      (optional)
+# SMTP_USER            (optional)
+# SMTP_PASSWORD        (optional)
+# ZOOM_ACCOUNT_ID      (optional)
+# ZOOM_CLIENT_ID       (optional)
+# ZOOM_CLIENT_SECRET   (optional)

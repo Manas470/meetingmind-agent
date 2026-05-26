@@ -1,0 +1,41 @@
+# Core
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+pydantic-settings==2.6.1
+python-multipart==0.0.20
+
+# AI / LangChain
+langchain==0.3.13
+langchain-anthropic==0.3.3
+langchain-core==0.3.28
+anthropic==0.40.0
+
+# Database
+sqlalchemy==2.0.36
+alembic==1.14.0
+aiosqlite==0.20.0
+asyncpg==0.30.0        # PostgreSQL async driver (Railway prod)
+
+# Integrations
+jira==3.8.0            # Atlassian Jira REST client
+slack-sdk==3.33.4      # Slack Web API
+google-auth==2.37.0
+google-auth-oauthlib==1.2.1
+google-api-python-client==2.157.0  # Gmail API
+
+# HTTP
+httpx==0.28.1
+aiohttp==3.11.10
+
+# Utilities
+python-jose[cryptography]==3.3.0
+python-dotenv==1.0.1
+tenacity==9.0.0        # Retry logic
+structlog==24.4.0      # Structured logging
+
+# Testing
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-mock==3.14.0
+httpx                  # For TestClient
